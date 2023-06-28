@@ -20,6 +20,11 @@ public class FactorialCalculatorController {
         this.factService = factService;
     }
 
+    @GetMapping("/total")
+    public int getTotal() {
+        return factService.getTotal();
+    }
+
     @GetMapping("/number")
     public int getFactorial(@RequestParam(required = true) String number) {
         return factService.getFactorial(number);
